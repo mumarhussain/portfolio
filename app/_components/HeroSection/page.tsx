@@ -54,7 +54,6 @@ function Hero() {
                     <div className='flex justify-center text-center md:text-start mb-8'>
                         <p className='text-white text-xl font-bold'>
                             Designing softwares that effortlessly connects with users and exceeds their expectations.
-                            {/* I am Gifted for experience with Better Service & Faster. I was able to help the client and successfully created with an identity. */}
                         </p>
                     </div>
                     <div className='text-white flex flex-col md:flex-row space-x-14 items-center' >
