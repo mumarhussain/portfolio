@@ -75,7 +75,6 @@ function Hero() {
                                 <p>
                                     +123 1234 234
 
-
                                 </p>
                             </div>
                         </div>
