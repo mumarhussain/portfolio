@@ -10,20 +10,13 @@ function Hero() {
     return (
         <div
             className='py-5 px-3 md:py-0 md:px-0'
-            style={
-                {
-                    backgroundImage: `url('https://images.unsplash.com/photo-1513569771920-c9e1d31714af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }
-            }>
-            <div className='md:container mx-auto flex flex-col lg:flex-row justify-center border-borderColor border-[3px] rounded-md md:rounded-none'>
+            >
+            <div className=' mx-auto flex flex-col lg:flex-row justify-center border-border border-[3px] rounded-md'>
                 <div className='md:p-20 md:h-[85vh]'>
                         <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
+                        transition={{ duration: 2 }}
                     >
                         <p className='bg-animationColor m-4 md:m-0 md:w-64 px-3 py-3 rounded-md text-lg text-white font-semibold'>
                             WELCOME TO MY <br />
@@ -58,14 +51,14 @@ function Hero() {
                     </div>
                     <div className='text-white flex flex-col md:flex-row space-x-14 items-center' >
                         <div className='text-white flex space-x-4'>
-                            <FontAwesomeIcon icon={faFacebookF} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-borderColor' />
-                            <FontAwesomeIcon icon={faTwitter} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-borderColor' />
-                            <FontAwesomeIcon icon={faInstagram} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-borderColor' />
-                            <FontAwesomeIcon icon={faLinkedin} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-borderColor' />
+                            <FontAwesomeIcon icon={faFacebookF} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
+                            <FontAwesomeIcon icon={faTwitter} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
+                            <FontAwesomeIcon icon={faInstagram} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
+                            <FontAwesomeIcon icon={faLinkedin} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
                         </div>
                         <div className='flex flex-col md:flex-row items-center mt-2 space-x-3'>
                             <div>
-                                <FontAwesomeIcon icon={faPhone} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-borderColor' />
+                                <FontAwesomeIcon icon={faPhone} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
                             </div>
                             <div>
                                 <p>
