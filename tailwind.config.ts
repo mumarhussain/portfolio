@@ -19,7 +19,7 @@ const config: Config = {
         textColor: "#8B8B8B",
         animationColor:"#FF014F",
         boxesBorderColor:"#787878",
-        border:"#2B2B2B"
+        border:"#1B1B1B"
       },
     },
   },
