@@ -1,3 +1,4 @@
+'use client'
 import React, { createContext }  from 'react'
 import Footer from '../_components/Footer/page'
 import Hero from '../_components/HeroSection/page'
