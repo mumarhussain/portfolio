@@ -17,9 +17,10 @@ const config: Config = {
         bgColor: "#0F0F0F",
         boxesBgColor: "#383838",
         textColor: "#8B8B8B",
-        animationColor:"#FF014F",
-        boxesBorderColor:"#787878",
-        border:"#1B1B1B"
+        animationColor: "#FF3A3A",
+        boxesBorderColor: "#787878",
+        border: "#1B1B1B",
+        circle:"#FF0043",
       },
     },
   },

@@ -53,120 +53,120 @@ function Skills() {
           </p>
         </div>
       </div>
-      <div className='bg-border md:w-3/4 mx-3 md:mx-auto flex flex-col md:flex-row  justify-between p-5 md:p-10 text-textColor rounded-lg shadow-lg mt-14 md:mb-14 mb-8 space-x-4'>
+      <div className='bg-border md:w-3/4 mx-3 md:mx-auto flex flex-col md:flex-row  justify-between p-5 md:p-10 text-textColor rounded-lg shadow-lg mt-14 md:mb-14 mb-8 md:space-x-4'>
         <div className='space-y-4'>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={80} duration={1500} />%
             </p>
             <div className='w-[70%]'>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 HTML
               </p>
-              <p>
+              <p className='md:text-lg'>
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={85} duration={1500} />%
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 CSS
               </p>
-              <p className='text-lg w-60'>
-
+              <p className='md:text-lg'>
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={70} duration={1300} />%
 
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 JAVASCRIPT
               </p>
-              <p className='text-lg w-60'>
+              <p className='md:text-lg '>
 
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
-          <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+          <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center '>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={55} duration={1300} />%
 
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 PYTHON
               </p>
-              <p className='text-lg w-60'>
+              <p className='md:text-lg '>
 
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
         </div>
-        <div className='space-y-4'>
+        <div className='mt-4 md:mt-0 space-y-4'>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={75} duration={1000} />%
 
             </p>
             <div className='w-[70%]'>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 FIGMA
               </p>
-              <p>
+              <p className='md:text-lg '>
+
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={80} duration={1000} />%
 
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 ADOBE XD
               </p>
-              <p className='text-lg w-60'>
+              <p className='md:text-lg '>
 
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={70} duration={1000} />%
 
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 ADOBE ILLUSTRATOR
               </p>
-              <p className='text-lg w-60'>
+              <p className='md:text-lg '>
 
                 Empowering businesses through innovative solutions
               </p>
             </div>
           </div>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
-            <p className='w-[30%] text-5xl flex justify-center mx-auto text-textColor'>
+            <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={85} duration={1000} />%
             </p>
             <div className='w-[70%] '>
-              <p className='font-semibold text-2xl mb-2 text-animationColor'>
+              <p className='font-semibold md:text-2xl mb-2 text-animationColor'>
                 LIGHTROOM
               </p>
-              <p className='text-lg w-60'>
+              <p className='md:text-lg '>
 
                 Empowering businesses through innovative solutions
               </p>
