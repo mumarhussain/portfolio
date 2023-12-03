@@ -63,7 +63,7 @@ function Services() {
         </div>
       </div>
       <div className='flex flex-col mx-auto space-y-7 mb-16 '>
-        <div className='flex flex-col md:flex-row  justify-center md:space-x-7 space-y-3 md:space-y-0 mt-3 md:mt-0 px-3 md:px-0'>
+        <div className='flex flex-col lg:flex-row  justify-center lg:space-x-7 space-y-3 lg:space-y-0 mt-3 lg:mt-0 px-3 lg:px-0'>
           <div
             data-aos="zoom-in-right"
             data-aos-delay="100"
@@ -139,7 +139,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col md:flex-row  justify-center md:space-x-7 space-y-3 md:space-y-0 mt-3 md:mt-0 px-3 md:px-0'>
+        <div className='flex flex-col lg:flex-row  justify-center lg:space-x-7 space-y-3 lg:space-y-0 mt-3 lg:mt-0 px-3 lg:px-0'>
 
           <div
             data-aos="zoom-in-right"

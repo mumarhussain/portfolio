@@ -53,7 +53,7 @@ function Skills() {
           </p>
         </div>
       </div>
-      <div className='bg-border md:w-3/4 mx-3 md:mx-auto flex flex-col md:flex-row  justify-between p-5 md:p-10 text-textColor rounded-lg shadow-lg mt-14 md:mb-14 mb-8 md:space-x-4'>
+      <div className='bg-border lg:w-3/4 mx-3 lg:mx-auto flex flex-col lg:flex-row  justify-between p-5 lg:p-10 text-textColor rounded-lg shadow-lg mt-14 lg:mb-14 mb-8 lg:space-x-4'>
         <div className='space-y-4'>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
             <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
@@ -112,7 +112,7 @@ function Skills() {
             </div>
           </div>
         </div>
-        <div className='mt-4 md:mt-0 space-y-4'>
+        <div className='mt-4 lg:mt-0 space-y-4'>
           <div className='bg-black rounded-lg h-32 text-white flex justify-evenly items-center'>
             <p className='w-[30%] text-xl md:text-5xl flex justify-center mx-auto text-textColor'>
               <AnimatedValue start={0} end={75} duration={1000} />%

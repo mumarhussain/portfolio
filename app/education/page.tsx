@@ -60,9 +60,9 @@ function Education() {
                     </p>
                 </div>
             </div>
-            <div className='flex flex-col md:flex-row'>
-                <div data-aos="fade-right">
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+            <div className='flex flex-col lg:flex-row'>
+                <div>
+                    <div data-aos="fade-right" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                         <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
                                 2007 - 2013
@@ -81,7 +81,7 @@ function Education() {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+                    <div data-aos="fade-right" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                     <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
 
@@ -104,7 +104,7 @@ function Education() {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+                    <div data-aos="fade-right" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                     <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
 
@@ -129,8 +129,8 @@ function Education() {
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+                <div>
+                    <div  data-aos="fade-left" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                     <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
 
@@ -154,7 +154,7 @@ function Education() {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+                    <div data-aos="fade-left" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                     <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
 
@@ -178,7 +178,7 @@ function Education() {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row items-center text-textColor mb-14'>
+                    <div data-aos="fade-left" className='flex flex-col md:flex-row items-center text-textColor mb-14'>
                     <div className='ml-auto md:ml-0 mx-5 md:mx-0 mb-3 md:mb-0'>
                             <p className='font-bold text-right text-white'>
 

@@ -5,23 +5,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import heroImg from "../../assets/images/photo1.png"
 import Image from 'next/image';
+import Link from 'next/link';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 function Hero() {
     return (
         <div
-        style={
-            {
-                backgroundImage: `url('https://img.freepik.com/free-vector/black-background-with-wavy-lines_52683-76524.jpg?w=740&t=st=1701340096~exp=1701340696~hmac=e897fd1d07d6bd377c4b523d5e136d099439dd65adc3478ceeb911bf01a3e74f')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
+            style={
+                {
+                    backgroundImage: `url('https://img.freepik.com/free-vector/black-background-with-wavy-lines_52683-76524.jpg?w=740&t=st=1701340096~exp=1701340696~hmac=e897fd1d07d6bd377c4b523d5e136d099439dd65adc3478ceeb911bf01a3e74f')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }
             }
-        }
             className='py-5 px-3 md:py-0 md:px-0'
-            >
+        >
             <div className=' mx-auto flex flex-col lg:flex-row justify-center border-border border-[3px] rounded-md'>
                 <div className='md:p-20 md:h-[85vh]'>
-                        <motion.div
+                    <motion.div
                         initial={{ opacity: 0, y: -60 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
@@ -59,10 +60,10 @@ function Hero() {
                     </div>
                     <div className='text-white flex flex-col md:flex-row space-x-14 items-center' >
                         <div className='text-white flex space-x-4'>
-                            <FontAwesomeIcon icon={faFacebookF} className='bg-boxesBgColor px-3 py-2 text-xl rounded border-2 border-boxesBorderColor'/>
-                            <FontAwesomeIcon icon={faTwitter} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor'/>
-                            <FontAwesomeIcon icon={faInstagram} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
-                            <FontAwesomeIcon icon={faLinkedin} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor' />
+                            <Link href="https://www.facebook.com/mumar.hussain.14"> <FontAwesomeIcon icon={faFacebookF} className='bg-boxesBgColor px-3 py-2 text-xl rounded border-2 border-boxesBorderColor  cursor-pointer' /></Link>
+                            <Link href="https://twitter.com/31Mumar"><FontAwesomeIcon icon={faTwitter} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor cursor-pointer' /></Link>
+                            <Link href="https://www.instagram.com/oops_backbancher/"><FontAwesomeIcon icon={faInstagram} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor cursor-pointer' /></Link>
+                            <Link href="https://www.linkedin.com/in/m-umar-hussain-25a268266/"><FontAwesomeIcon icon={faLinkedin} className='bg-boxesBgColor px-3 py-2 text-lg rounded border-2 border-boxesBorderColor cursor-pointer' /></Link>
                         </div>
                         <div className='flex flex-col md:flex-row items-center mt-2 space-x-3'>
                             <div>
