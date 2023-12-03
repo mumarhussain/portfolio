@@ -39,7 +39,7 @@ function Services() {
         animate={inView ? "visible" : "hidden"}
         variants={animationVariants}
         transition={{ duration: 1 }}
-        animate={controls}
+        // animate={controls}
       >
         <div className='flex justify-center mx-auto mt-20 md:mt-28 mb-6 md:mb-10 text-center'>
           <p className='bg-animationColor text-xl m-4 md:m-0 md:w-44 py-2 px-5 md:px-0  rounded-md text-white font-semibold'>

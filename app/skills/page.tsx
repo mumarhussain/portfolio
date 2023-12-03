@@ -29,7 +29,7 @@ function Skills() {
         animate={inView ? "visible" : "hidden"}
         variants={animationVariants}
         transition={{ duration: 1 }}
-        animate={controls}
+        // animate={controls}
       >
         <div className='flex justify-center mx-auto mt-20 md:mt-32 mb-6 md:mb-10 text-center'>
           <p className='bg-animationColor text-xl m-4 md:m-0 md:w-64 px-7 py-2 rounded-md text-white font-semibold'>
