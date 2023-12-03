@@ -32,7 +32,7 @@ function Hero() {
                             WORLD
                         </p>
                         <p className='text-5xl font-bold text-center md:text-start  text-white mt-8'>
-                            I'm Umar Hussain
+                            I am Umar Hussain
                         </p>
                         <div className='text-2xl font-bold text-center md:text-start text-animationColor my-6 '>
                             <TypeAnimation

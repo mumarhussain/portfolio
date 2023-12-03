@@ -64,7 +64,7 @@ function Navbar() {
                             whileHover={{ scale: 0.8, transition: { duration: 0.4 } }}
                             whileTap={{ scale: 0.9 }}
                             className='text-white font-bold bg-boxesBgColor hover:bg-white hover:text-black py-2 px-6 rounded-lg'>
-                            Let's Talk
+                            Lets Talk
                         </motion.button>
                     </div>
                 </div>
