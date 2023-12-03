@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-interface Iprops {
-  start: number;
-  end: number;
-  duration: number;
-}
+// interface Iprops {
+//   start: number;
+//   end: number;
+//   duration: number;
+// }
 
-const AnimatedValue = ({ start, end, duration }: Iprops) => {
+const AnimatedValue = ({ start, end, duration }: any) => {
   const [value, setValue] = useState(start);
   const [animationVisible, setAnimationVisible] = useState(false);
 
