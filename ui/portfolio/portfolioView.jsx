@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Hero } from "./hero";
 import { About } from "./about";
 import { Skills } from "./skills";
@@ -7,14 +7,25 @@ import { Education } from "./education";
 import { Experience } from "./experience";
 import { Testimonials } from "./testimonials";
 import { Contact } from "./contact";
+import { WhatIDo } from "./whatIDo";
+import { ArrowUp } from "lucide-react";
 
 const PortfolioView = () => {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
+
+  const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
+
+  const circleLength = 2 * Math.PI * 45; // 2πr for r=45
+  const strokeDashoffset = useTransform(smoothProgress, (progress) => {
+    return circleLength - progress * circleLength;
+  });
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div
@@ -24,13 +35,42 @@ const PortfolioView = () => {
         backgroundColor: "#0a0a0a",
       }}
     >
-      {/* Progress bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-limeYellow to-[#b8cc00] transform-origin-0 z-50"
-        style={{ scaleX }}
-      />
+      <div className="fixed bottom-5 right-5 z-50 w-12 h-12 ">
+        <motion.svg
+          width="50"
+          height="50"
+          viewBox="0 0 100 100"
+          className="rotate-[-90deg]"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#e6ff00"
+            strokeWidth="5"
+            fill="none"
+            opacity="0.2"
+          />
+          <motion.circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#e6ff00"
+            strokeWidth="9"
+            fill="none"
+            strokeDasharray={circleLength}
+            strokeDashoffset={strokeDashoffset}
+            strokeLinecap="round"
+          />
+        </motion.svg>
+        <button
+          onClick={scrollToTop}
+          className="absolute inset-0 flex items-center justify-center  cursor-pointer"
+        >
+          <ArrowUp size={25} className="text-limeYellow" />
+        </button>
+      </div>
 
-      {/* Main Glass Container with 80px spacing */}
       <main className="relative z-10 min-h-screen flex items-center justify-center px-20 py-20">
         <div className="w-full max-w-7xl">
           <motion.div
@@ -40,6 +80,7 @@ const PortfolioView = () => {
             className="backdrop-blur-xl bg-black/30 border border-black/50 rounded-3xl shadow-2xl overflow-hidden"
           >
             <Hero />
+            <WhatIDo />
             <About />
             <Skills />
             <Education />
@@ -52,4 +93,5 @@ const PortfolioView = () => {
     </div>
   );
 };
+
 export default PortfolioView;

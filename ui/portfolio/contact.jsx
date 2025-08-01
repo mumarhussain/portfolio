@@ -11,6 +11,7 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Facebook,
 } from "lucide-react";
 
 const Contact = () => {
@@ -40,19 +41,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "david.fincher@example.com",
-      href: "mailto:david.fincher@example.com",
+      value: "mumarhussain126@gmail.com",
+      href: "mailto:mumarhussain126@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "987-654-321",
-      href: "tel:987654321",
+      value: "+92300-6619281",
+      href: "tel:+92300-6619281",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "New York, United States",
+      value: "Faisalabad Punjab, Pakistan",
       href: "#",
     },
   ];
@@ -60,6 +61,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
   ];
 
@@ -134,7 +136,7 @@ const Contact = () => {
 
             <div>
               <h3 className="text-xl font-semibold text-white mb-4">
-                Follow Me
+                Connect with me:
               </h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -239,7 +241,7 @@ const Contact = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold hover:bg-[#d4e600] transition-colors duration-200"
+                className="w-full cursor-pointer flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold hover:bg-[#d4e600] transition-colors duration-200"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
@@ -253,8 +255,9 @@ const Contact = () => {
           variants={itemVariants}
           className="mt-12 pt-8 border-t border-white/10 text-center"
         >
-          <p className="text-white/60">
-            © 2024 David Fincher. Built with Next.js and Tailwind CSS.
+          <p className="text-white">
+            Made with ❤️ by{" "}
+            <span className="text-limeYellow">Muhammad Umar Hussain</span>{" "}
           </p>
         </motion.div>
       </motion.div>

@@ -7,7 +7,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "David Fincher - Portfolio",
+  title: "Muhammad Umar - Portfolio",
   description: "Creative Developer & Manager Portfolio",
 };
 
