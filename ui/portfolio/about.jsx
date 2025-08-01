@@ -98,7 +98,7 @@ const About = () => {
 
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-3 gap-4"
           >
             {features.map((feature, index) => (
               <motion.div

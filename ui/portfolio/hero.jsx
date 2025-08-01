@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Calendar, Phone, Mail, MapPin, Menu } from "lucide-react";
 import Image from "next/image";
@@ -68,13 +67,13 @@ const Hero = () => {
             >
               <div className="relative">
                 <div className="w-60 h-96 rounded-tr-[170px]  rounded-bl-[170px] rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 ">
-                  {/* <Image
-                    src="/assets/images/IMG_5112.JPEG"
+                  <Image
+                    src="/assets/images/upscalemedia-transformed.jpeg"
                     alt="Profile"
-                    height={300}
-                    width={250}
+                    height={400}
+                    width={350}
                     className="w-full h-full object-cover"
-                  /> */}
+                  />
                 </div>
 
                 {/* Social Links Pill */}

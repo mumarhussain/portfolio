@@ -4,19 +4,35 @@ import { motion } from "framer-motion";
 import {
   MonitorSmartphone,
   Smartphone,
-  Camera,
-  BarChart2,
-  ActivitySquare,
-  Users,
+  LayoutDashboard,
+  ShieldCheck,
+  GaugeCircle,
+  RefreshCw,
 } from "lucide-react";
 
 const services = [
   { icon: MonitorSmartphone, title: "Web Sites", subtitle: "and Platforms" },
   { icon: Smartphone, title: "Mobile", subtitle: "Applications" },
-  { icon: ActivitySquare, title: "Strategy", subtitle: "and Branding" },
-  { icon: Camera, title: "Product", subtitle: "Photography" },
-  { icon: BarChart2, title: "SEO", subtitle: "Optimization" },
-  { icon: Users, title: "Social Media", subtitle: "Management" },
+  {
+    icon: LayoutDashboard,
+    title: "Admin ",
+    subtitle: "Panel and CMS",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Authentication ",
+    subtitle: "and Authorization",
+  },
+  {
+    icon: GaugeCircle,
+    title: "Performance",
+    subtitle: "Optimization",
+  },
+  {
+    icon: RefreshCw,
+    title: "Website ",
+    subtitle: "Maintenance & Support",
+  },
 ];
 
 const containerVariants = {
@@ -37,7 +53,10 @@ const itemVariants = {
 
 const WhatIDo = () => {
   return (
-    <section id="what-i-do" className="relative px-6 md:px-16 py-20">
+    <section
+      id="what-i-do"
+      className="relative px-6 md:px-16 py-20 border-b border-limeYellow/10"
+    >
       <div className="max-w-6xl mx-auto text-center">
         <motion.div
           variants={containerVariants}
@@ -46,26 +65,29 @@ const WhatIDo = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-limeYellow text-start    text-3xl md:text-4xl font-semibold mb-4"
+            className="text-white text-start text-3xl md:text-4xl mb-4"
           >
             What i do
+            <hr className="border-b border-limeYellow w-44 mt-1 h-px" />
           </motion.h2>
 
           <motion.div
             variants={itemVariants}
-            className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
           >
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl px-6 py-8 flex flex-col items-center text-center shadow-md hover:shadow-lime-500/20 transition-all duration-300"
+                className=" flex flex-col space-y- p-5 rounded-xl items-center text-center shadow-md hover:shadow-lime-500/20 transition duration-500 cursor-pointer"
               >
                 <service.icon className="w-12 h-12 text-limeYellow mb-4" />
                 <h3 className="text-white font-medium text-lg">
                   {service.title}
                 </h3>
-                <p className="text-white/70">{service.subtitle}</p>
+                <p className="text-white font-medium text-lg">
+                  {service.subtitle}
+                </p>
               </motion.div>
             ))}
           </motion.div>

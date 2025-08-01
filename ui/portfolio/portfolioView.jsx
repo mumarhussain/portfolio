@@ -81,7 +81,7 @@ const PortfolioView = () => {
           >
             <Hero />
             <WhatIDo />
-            <About />
+            {/* <About /> */}
             <Skills />
             <Education />
             <Experience />
