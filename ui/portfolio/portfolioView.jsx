@@ -9,6 +9,7 @@ import { Testimonials } from "./testimonials";
 import { Contact } from "./contact";
 import { WhatIDo } from "./whatIDo";
 import { ArrowUp } from "lucide-react";
+import { Projects } from "./projects";
 
 const PortfolioView = () => {
   const { scrollYProgress } = useScroll();
@@ -83,8 +84,9 @@ const PortfolioView = () => {
             <WhatIDo />
             {/* <About /> */}
             <Skills />
-            <Education />
             <Experience />
+            <Education />
+            <Projects />
             <Testimonials />
             <Contact />
           </motion.div>
