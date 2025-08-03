@@ -9,11 +9,11 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const frontendSkills = [
-    { name: "React", level: 95 },
-    { name: "Next.js", level: 90 },
+    { name: "React", level: 92 },
+    { name: "Next.js", level: 94 },
     { name: "TypeScript", level: 88 },
-    { name: "Tailwind CSS", level: 92 },
-    { name: "Framer Motion", level: 85 },
+    { name: "Tailwind CSS", level: 95 },
+    { name: "State Management", level: 90 },
   ];
 
   const backendSkills = [
@@ -66,7 +66,11 @@ const Skills = () => {
           className="text-3xl md:text-4xl text-start mb-12"
         >
           <span className="text-white">Skills & Technologies</span>
-          <hr className="border-b border-limeYellow w-96 mt-1 h-px" />
+
+          <motion.div
+            variants={itemVariants}
+            className="w-96 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+          />
         </motion.h2>
         <div className="flex items-center justify-center">
           <p className="uppercase text-white/20 inline-flex font-bold text-4xl mb-5 tracking-[2px]">
@@ -130,42 +134,6 @@ const Skills = () => {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Frontend Skills */}
         <motion.div variants={itemVariants}>
-          {/* <h3 className="text-xl font-semibold text-white mb-6 text-center">
-            Frontend
-          </h3> */}
-          {/* <div className="flex items-center justify-start">
-            <p className="uppercase text-white/20 inline-flex font-bold text-4xl rotate-90 tracking-[12px]">
-              Frontend
-            </p>
-          </div>
-          <div className="space-y-4">
-            {frontendSkills.map((skill, index) => (
-              <div key={skill.name}>
-                <div className="flex justify-between items-center mb-1">
-                  <span className="text-white/80 font-medium">
-                    {skill.name}
-                  </span>
-                  <span className="text-limeYellow text-sm">
-                    {skill.level}%
-                  </span>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={
-                      isInView ? { width: `${skill.level}%` } : { width: 0 }
-                    }
-                    transition={{
-                      duration: 1,
-                      delay: index * 0.1,
-                      ease: "easeOut",
-                    }}
-                    className="bg-gradient-to-r from-limeYellow to-[#b8cc00] h-2 rounded-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div> */}
           <div className="flex gap-5">
             <div className="flex flex-col justify-center items-center w-[10%]">
               <p className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]">

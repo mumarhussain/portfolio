@@ -6,28 +6,28 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "MERN Developer",
+    title: "MERN Stack Developer",
     company: "DGSol Marketing Agency",
     location: "Faisalabad, Pakistan",
-    period: "2024 - Present",
+    period: "Feb 2025 - Present",
     description:
-      "I would gladly pay over 600 dollars for tavonline. Tavonline has really helped our business. I like tavonline more and more each day because it makes my life a lot easier.",
+      "Designing and maintaining dynamic web applications using the MERN stack, focusing on seamless user experiences and optimized backend functionality. Integrating secure authentication systems and scalable architecture.",
+  },
+  {
+    title: "MERN Stack Developer",
+    company: "Three Arrow Tech",
+    location: "Faisalabad, Pakistan",
+    period: "June 2024 - Dec 2024",
+    description:
+      "Built and deployed full-stack applications using MongoDB, Express.js, Next.js, and Node.js. Implemented user authentication and role-based access control with JWT. Optimized database schemas and queries to reduce response time.",
   },
   {
     title: "Frontend Developer",
-    company: "Three Arrow Solutions",
-    location: "Faisalabad, Pakistan",
-    period: "2021 - 2022",
-    description:
-      "I would gladly pay over 600 dollars for tavonline. Tavonline has really helped our business. I like tavonline more and more each day because it makes my life a lot easier.",
-  },
-  {
-    title: "Full Stack Developer",
     company: "TOPSOL Faisalabad",
     location: "Faisalabad, Pakistan",
-    period: "2022 - 2024",
+    period: "Feb 2023 - Apr 2024",
     description:
-      "I would gladly pay over 600 dollars for tavonline. Tavonline has really helped our business. I like tavonline more and more each day because it makes my life a lot easier.",
+      "Developed responsive, high-performance web interfaces. Collaborated with UI/UX designers to implement pixel-perfect layouts with Tailwind CSS. Integrated RESTful APIs and real-time data feeds, optimizing requests to reduce page load time.",
   },
 ];
 
@@ -48,9 +48,12 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="relative px-8 md:px-16 py-16">
+    <section
+      id="experience"
+      className="relative px-8 md:px-16 py-16 border-b border-white/10"
+    >
       {/* Center vertical line */}
-      <div className="absolute left-1/2 top-25 h-3/5 w-px bg-limeYellow -translate-x-1/2" />
+      <div className="absolute left-1/2 top-25 h-[62%] w-px bg-limeYellow -translate-x-1/2" />
 
       <motion.div
         ref={ref}
@@ -63,10 +66,7 @@ const Experience = () => {
           variants={itemVariants}
           className="text-lg text-center mb-12"
         >
-          <span
-            className="mt-5 px-6 py-3 cursor-pointer bg-white text-black  rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg"
-            // className="bg-gradient-to-r from-limeYellow to-[#b8cc00] bg-clip-text text-transparent"
-          >
+          <span className="mt-5 px-6 py-3 cursor-pointer bg-white text-black  rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg">
             👨‍💻 Works Experience
           </span>
         </motion.h2>

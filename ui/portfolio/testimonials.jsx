@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "This app completely changed my routine! The daily lessons and exercises are easy to follow, and I've noticed a huge boost in my energy and confidence.",
+    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
     author: "James K, Denver",
   },
 
@@ -19,7 +19,7 @@ const testimonials = [
     author: "Sarah L, Austin",
   },
   {
-    text: "This app completely changed my routine! The daily lessons and exercises are easy to follow, and I've noticed a huge boost in my energy and confidence.",
+    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
     author: "James K, Denver",
   },
 
@@ -64,6 +64,10 @@ const Testimonials = () => {
       ? swiperRef.current.swiper.slideNext()
       : swiperRef.current.swiper.slidePrev();
   };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <motion.div
@@ -72,29 +76,33 @@ const Testimonials = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className=""
+      className="px-8 md:px-16 py-16"
     >
-      <div className="py-10 px-5 container mx-auto">
+      <div className=" container mx-auto">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col md:flex-row items-center justify-end"
+          className="mb-6"
         >
           {/* <p className="text-limeYellow italic">- Testimonials</p> */}
-          <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-limeYellow">
+          <h2 className="text-2xl md:text-4xl font-semibold  text-limeYellow">
             Real people, real results.
           </h2>
+          <motion.div
+            variants={itemVariants}
+            className="w-[470px] mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+          />
         </motion.div>
 
-        <Swiper ref={swiperRef} spaceBetween={20} slidesPerView={slidesPerView}>
+        <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={slidesPerView}>
           {testimonials.map(({ text, author }, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.9, delay: index * 0.2 }}
               >
                 <TestimonialCard text={text} author={author} />
               </motion.div>

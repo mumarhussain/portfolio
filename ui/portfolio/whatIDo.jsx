@@ -68,7 +68,10 @@ const WhatIDo = () => {
             className="text-white text-start text-3xl md:text-4xl mb-4"
           >
             What i do
-            <hr className="border-b border-limeYellow w-44 mt-1 h-px" />
+            <motion.div
+              variants={itemVariants}
+              className="w-44 mt-0.5 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+            />
           </motion.h2>
 
           <motion.div
