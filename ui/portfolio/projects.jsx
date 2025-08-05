@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { ExternalLink, Github, Eye, Calendar, Tag } from "lucide-react";
 import { projectsData } from "./data";
 import Image from "next/image";
+import Link from "next/link";
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -75,27 +76,15 @@ const Projects = () => {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-48 object-cover bg-top transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <a
-                    href={project.liveUrl}
-                    className="p-2 bg-limeYellow text-black rounded-full hover:bg-[#d4e600] transition-colors duration-200"
-                  >
-                    <Eye className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="p-2 bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-200"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a
+                  <Link
                     href={project.liveUrl}
                     className="p-2 bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-200"
                   >
                     <ExternalLink className="w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -112,20 +101,14 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project Description */}
-                <p className="text-white/70 text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                {/* Technologies */}
                 <div className="mb-4">
-                  <div className="flex items-center mb-2">
+                  <div className="flex items-center ">
                     <Tag className="w-4 h-4 text-[#e6ff00] mr-2" />
                     <span className="text-white/80 text-sm font-medium">
                       Technologies:
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 py-3">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
@@ -139,20 +122,13 @@ const Projects = () => {
 
                 {/* Project Links */}
                 <div className="flex space-x-3">
-                  <a
+                  <Link
                     href={project.liveUrl}
                     className="flex-1 flex items-center justify-center space-x-2 py-2 bg-[#e6ff00] text-black rounded-lg hover:bg-[#d4e600] transition-colors duration-200 text-sm font-medium"
                   >
                     <Eye className="w-4 h-4" />
                     <span>Live Demo</span>
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="flex-1 flex items-center justify-center space-x-2 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors duration-200 text-sm font-medium"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>Code</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
