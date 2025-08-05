@@ -72,6 +72,7 @@ const Skills = () => {
             className="w-96 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
           />
         </motion.h2>
+        
         <div className="flex items-center justify-center">
           <p className="uppercase text-white/20 inline-flex font-bold text-4xl mb-5 tracking-[2px]">
             Tools and other

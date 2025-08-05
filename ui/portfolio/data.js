@@ -22,7 +22,7 @@ export const projectsData = [
     liveUrl: "https://optilinko-website.vercel.app/",
     date: "2024",
     featured: false,
-    status: "In Process",
+    status: "Complete",
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ export const projectsData = [
       "Developed the backend for the Spicey website using Node.js and Express, creating secure and efficient APIs. Integrated MongoDB for data storage and retrieval and also implements user authentication and authorization for secure access and collaborated with the team using Git for version control to maintain a streamlined development workflow",
     image: img,
     technologies: [
-      "Next.js",
+      "React.js",
       "Express.js",
       "Node.js",
       "Mongo DB",
@@ -76,7 +76,7 @@ export const projectsData = [
     liveUrl: "#",
     date: "2023",
     featured: false,
-    status: "Complete",
+    status: "In Process",
   },
   {
     id: 5,
@@ -106,6 +106,6 @@ export const projectsData = [
     liveUrl: "#",
     date: "2022",
     featured: true,
-    status: "Complete",
+    status: "In Process",
   },
 ];

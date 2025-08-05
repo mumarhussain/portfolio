@@ -6,6 +6,7 @@ import { ExternalLink, Github, Eye, Calendar, Tag } from "lucide-react";
 import { projectsData } from "./data";
 import Image from "next/image";
 import Link from "next/link";
+
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -61,7 +62,10 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" layout>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 cursor-pointer"
+          layout
+        >
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
@@ -76,15 +80,19 @@ const Projects = () => {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover bg-top transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-48 object-cover bg-top transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Link
-                    href={project.liveUrl}
-                    className="p-2 bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-200"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </Link>
+                  {project?.status === "Complete" ? (
+                    <Link
+                      href={project.liveUrl}
+                      className="p-2 bg-white text-black rounded-full hover:bg-gray-200 transition-colors duration-200"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </Link>
+                  ) : (
+                    <p className="text-white font-medium text-lg">In Process</p>
+                  )}
                 </div>
               </div>
 

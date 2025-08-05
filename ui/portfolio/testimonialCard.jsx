@@ -19,7 +19,7 @@ const TestimonialCard = ({ text, author }) => {
             </div>
           </div>
           <div className="md:h-2/3 lg:h-1/2 items-start justify-end text-white flex flex-col space-y-4">
-            <p className="text-xl 2xl:text-2xl">{text}</p>
+            <p className="text-lg 2xl:text-2xl">{text}</p>
             <p className="">~ {author}</p>
           </div>
         </div>

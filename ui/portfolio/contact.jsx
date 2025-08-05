@@ -33,36 +33,39 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Form submitted:", formData);
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
       value: "mumarhussain126@gmail.com",
       href: "mailto:mumarhussain126@gmail.com",
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+92300-6619281",
-      href: "tel:+92300-6619281",
+      value: "+92 300-6619281",
+      href: "tel:+92 300-6619281",
     },
     {
       icon: MapPin,
-      label: "Location",
       value: "Faisalabad Punjab, Pakistan",
-      href: "#",
+      href: "https://www.google.com/maps/place/Green+Dots+High+School/@31.4323436,73.0955718,17z/data=!3m1!4b1!4m6!3m5!1s0x3922699695f95145:0x1145e18700e36590!8m2!3d31.432339!4d73.0981521!16s%2Fg%2F11l8ghsbq_?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Github, href: "https://github.com/mumarhussain", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/mumarhussain",
+      label: "LinkedIn",
+    },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/umarhussain230",
+      label: "Facebook",
+    },
   ];
 
   const containerVariants = {
@@ -94,20 +97,16 @@ const Contact = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl font-bold text-center mb-4"
+          className="text-3xl md:text-4xl font-bold text-start mb-14"
         >
-          <span className="bg-gradient-to-r from-limeYellow to-[#b8cc00] bg-clip-text text-transparent">
+          <span className="text-limeYellow">
             Get In Touch
           </span>
+          <motion.div
+            variants={itemVariants}
+            className="w-60 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+          />
         </motion.h2>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-center text-white/70 mb-12 max-w-2xl mx-auto"
-        >
-          I'm always open to discussing new opportunities, interesting projects,
-          or just having a chat about technology.
-        </motion.p>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
@@ -122,11 +121,10 @@ const Contact = () => {
                     key={index}
                     href={info.href}
                     whileHover={{ scale: 1.02, x: 5 }}
-                    className="flex items-center p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors duration-200"
+                    className="flex items-center p-4  border-b border-white/10 hover:bg-white/10 hover:rounded-t-2xl transition-colors duration-200"
                   >
-                    <info.icon className="w-6 h-6 text-limeYellow mr-4" />
+                    <info.icon className="w-6 h-6 text-[#D1ED5D] mr-4" />
                     <div>
-                      <p className="text-white/60 text-sm">{info.label}</p>
                       <p className="text-white font-medium">{info.value}</p>
                     </div>
                   </motion.a>
@@ -160,52 +158,30 @@ const Contact = () => {
               Send Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-white/70 text-sm font-medium mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-white/70 text-sm font-medium mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
+              <div className="grid md:grid-cols-1 gap-4">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
+                  placeholder="Enter name here"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
+                  placeholder="Enter email here"
+                />
               </div>
 
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-white/70 text-sm font-medium mb-2"
-                >
-                  Subject
-                </label>
                 <input
                   type="text"
                   id="subject"
@@ -213,7 +189,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200"
+                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
                   placeholder="What's this about?"
                 />
               </div>
@@ -232,16 +208,16 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full cursor-pointer flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold hover:bg-[#d4e600] transition-colors duration-200"
+                className="w-full cursor-pointer flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold hover:bg-[#d4e600] transition-colors duration-500"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>

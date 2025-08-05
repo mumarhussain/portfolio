@@ -68,7 +68,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-60 h-96 rounded-tr-[170px]  rounded-bl-[170px] rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 ">
                   <Image
-                    src="/assets/images/upscalemedia-transformed.jpeg"
+                    src="/assets/images/a0275355-b108-4c7d-9927-5d6be17dd95d.jpg"
                     alt="Profile"
                     height={400}
                     width={350}
@@ -84,16 +84,19 @@ const Hero = () => {
                   className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-6 py-3 shadow-lg"
                 >
                   <div className="flex space-x-4 text-black font-medium">
-                    <span className="hover:text-limeYellow cursor-pointer transition-colors">
+                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
                       Fb.
                     </span>
-                    <span className="hover:text-limeYellow cursor-pointer transition-colors">
-                      Tw.
+                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
+                      Gh.
                     </span>
-                    <span className="hover:text-limeYellow cursor-pointer transition-colors">
+                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
+                      Ln.
+                    </span>
+                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
                       Ins.
                     </span>
-                    <span className="hover:text-limeYellow cursor-pointer transition-colors">
+                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
                       Drb.
                     </span>
                   </div>
@@ -159,33 +162,32 @@ const Hero = () => {
               {/* Description */}
             </motion.div>
           </div>
-          <div
-            className="mt-10
-          "
-          >
+          <div className="">
             <motion.p
               variants={itemVariants}
-              className="text-white/70 text-lg leading-relaxed"
+              className="text-white/70 text-lg leading-relaxed my-10"
             >
-              Bringing over 2+ year of experience, I'm a skilled MERN Stack
-              Developer with hands-on experience in developing and deploying
-              full-stack applications. Skilled in building interactive front-end
-              interfaces with React.js, creating secure backends with Node.js
-              and Express, and efficiently managing databases using MongoDB.
-              Expert in user authentication, real-time data interaction, and
-              responsive design.Committed to delivering high-quality and
-              user-focused solutions manipulating the MERN stack.
+              With over 2 years of experience, I am a skilled MERN Stack
+              Developer proficient in developing and deploying full-stack
+              applications. I excel at building interactive front-end interfaces
+              using React.js, creating secure backends with Node.js and Express,
+              and efficiently managing databases with MongoDB. I have expertise
+              in user authentication, real-time data interaction, and responsive
+              design. I am committed to delivering high-quality, user-focused
+              solutions while effectively utilizing the MERN stack.
             </motion.p>
 
             {/* CTA Button */}
-            <motion.button
+            <motion.a
+              href="/Muhammad_Umar_Hussain_Resume.pdf"
+              download="Muhammad_Umar_Hussain_Resume.pdf"
               variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-5 px-8 py-4 cursor-pointer bg-limeYellow text-black font-semibold rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg"
+              className="inline-block px-8 py-4 cursor-pointer bg-limeYellow text-black font-semibold rounded-full hover:bg-[#d4e600] transition-colors duration-500 shadow-lg"
             >
               Download Resume
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

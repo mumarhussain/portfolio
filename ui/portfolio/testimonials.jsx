@@ -10,22 +10,22 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
-    author: "James K, Denver",
+    text: "From day one, Umar was pro active and communicative. He made the whole development process feel effortless for our team",
+    author: "Mubashbar Nawaz",
   },
 
   {
-    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
-    author: "Sarah L, Austin",
+    text: "Our platform is faster, smoother, and more user-friendly thanks to his work. He’s the kind of developer who actually cares about the end product.",
+    author: "Ayesha Malik",
   },
   {
-    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
-    author: "James K, Denver",
+    text: "He didn’t just build our app — he made it better than we imagined. He understood exactly what we needed and added features we didn’t even think of.",
+    author: "Michael Harris",
   },
 
   {
-    text: "I love how easy it is to integrate these lessons into my daily life. Highly recommend to anyone looking for a change!",
-    author: "Sarah L, Austin",
+    text: "I was impressed with how Umar handled challenges. Every time a problem came up, he had a clean, simple solution ready within hours.",
+    author: "Sarah Ahmed",
   },
 ];
 
@@ -117,7 +117,7 @@ const Testimonials = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="w-full md:w-4/5 mx-auto"
           >
-            <div className="h-2 rounded-full bg-gray-200 overflow-hidden">
+            <div className="h-2 rounded-full bg-gray-500 overflow-hidden">
               <motion.div
                 className="h-full bg-limeYellow rounded-full"
                 initial={{ width: 0 }}
