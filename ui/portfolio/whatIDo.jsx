@@ -1,39 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  MonitorSmartphone,
-  Smartphone,
-  LayoutDashboard,
-  ShieldCheck,
-  GaugeCircle,
-  RefreshCw,
-} from "lucide-react";
-
-const services = [
-  { icon: MonitorSmartphone, title: "Web Sites", subtitle: "and Platforms" },
-  { icon: Smartphone, title: "Mobile", subtitle: "Applications" },
-  {
-    icon: LayoutDashboard,
-    title: "Admin ",
-    subtitle: "Panel and CMS",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Authentication ",
-    subtitle: "and Authorization",
-  },
-  {
-    icon: GaugeCircle,
-    title: "Performance",
-    subtitle: "Optimization",
-  },
-  {
-    icon: RefreshCw,
-    title: "Website ",
-    subtitle: "Maintenance & Support",
-  },
-];
+import { services } from "./data";
 
 const containerVariants = {
   hidden: { opacity: 0 },

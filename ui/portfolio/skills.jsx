@@ -3,33 +3,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { frontendSkills, backendSkills, toolSkills } from "./data";
 
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const frontendSkills = [
-    { name: "React", level: 92 },
-    { name: "Next.js", level: 94 },
-    { name: "TypeScript", level: 88 },
-    { name: "Tailwind CSS", level: 95 },
-    { name: "State Management", level: 90 },
-  ];
-
-  const backendSkills = [
-    { name: "Node.js", level: 90 },
-    { name: "MySql", level: 85 },
-    { name: "PostgreSQL", level: 88 },
-    { name: "MongoDB", level: 82 },
-    { name: "GraphQL", level: 80 },
-  ];
-
-  const toolSkills = [
-    { name: "Git", level: 95 },
-    { name: "AWS", level: 80 },
-    { name: "Figma", level: 88 },
-    { name: "Jest", level: 85 },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,7 +50,7 @@ const Skills = () => {
             className="w-96 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
           />
         </motion.h2>
-        
+
         <div className="flex items-center justify-center">
           <p className="uppercase text-white/20 inline-flex font-bold text-4xl mb-5 tracking-[2px]">
             Tools and other

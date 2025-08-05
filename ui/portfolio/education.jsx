@@ -3,26 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, GraduationCap, MapPin } from "lucide-react";
-
-const education = [
-  {
-    degree: "Bachelor of Computer Science",
-    school: "National University of Modern Languages",
-    location: "Faisalabad, Pakistan",
-    period: "2023 - Present",
-    description:
-      "Pursuing a BS in Computer Science with focus on Software Engineering and Machine Learning. Completed advanced coursework in algorithms, data structures, database systems, and AI, maintaining a 3.5+ GPA.",
-  },
-  {
-    degree: "Intermediate in Computer Science",
-    school: "Govt. Islamia College",
-    location: "Faisalabad, Pakistan",
-    period: "2020 - 2022",
-    description:
-      "Completed ICS with strong foundations in programming, data structures, and computer systems. Captained the college cricket team to the regional finals, delivering strategic leadership and teamwork.",
-    achievements: ["GPA: 3.8/4.0", "ACM Programming Team", "Hackathon Winner"],
-  },
-];
+import { educationData } from "./data";
 
 const Education = () => {
   const ref = useRef(null);
@@ -61,7 +42,7 @@ const Education = () => {
           </span>
         </motion.h2>
 
-        {education.map((edu, idx) => {
+        {educationData.map((edu, idx) => {
           const isLeft = idx % 2 === 0;
           return (
             <motion.div

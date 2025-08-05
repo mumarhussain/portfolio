@@ -7,27 +7,7 @@ import "swiper/css/navigation";
 import RightArrow from "@/public/assets/images/RightArrow.svg";
 import TestimonialCard from "./testimonialCard";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    text: "From day one, Umar was pro active and communicative. He made the whole development process feel effortless for our team",
-    author: "Mubashbar Nawaz",
-  },
-
-  {
-    text: "Our platform is faster, smoother, and more user-friendly thanks to his work. He’s the kind of developer who actually cares about the end product.",
-    author: "Ayesha Malik",
-  },
-  {
-    text: "He didn’t just build our app — he made it better than we imagined. He understood exactly what we needed and added features we didn’t even think of.",
-    author: "Michael Harris",
-  },
-
-  {
-    text: "I was impressed with how Umar handled challenges. Every time a problem came up, he had a clean, simple solution ready within hours.",
-    author: "Sarah Ahmed",
-  },
-];
+import { testimonialsData } from "./data";
 
 const Testimonials = () => {
   const swiperRef = useRef(null);
@@ -36,7 +16,7 @@ const Testimonials = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
-  const totalSlides = testimonials.length;
+  const totalSlides = testimonialsData.length;
 
   useEffect(() => {
     const updateSlidesPerView = () => {
@@ -97,7 +77,7 @@ const Testimonials = () => {
         </motion.div>
 
         <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={slidesPerView}>
-          {testimonials.map(({ text, author }, index) => (
+          {testimonialsData.map(({ text, author }, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
