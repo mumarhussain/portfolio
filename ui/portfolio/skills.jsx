@@ -49,6 +49,7 @@ const Skills = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView={isInView ? "visible" : "hidden"}
+        viewport={{ once: true }}
       >
         <motion.h2
           variants={itemVariants}
@@ -80,6 +81,7 @@ const Skills = () => {
               <motion.div
                 key={tool.name}
                 variants={itemVariants}
+                viewport={{ once: true }}
                 className="flex flex-col items-center justify-center"
               >
                 <svg width="160" height="160" className="rotate-[-90deg]">
@@ -102,6 +104,7 @@ const Skills = () => {
                     strokeDasharray={circumference}
                     initial="hidden"
                     whileInView={isInView ? "visible" : "hidden"}
+                    viewport={{ once: true }}
                     variants={circleVariants(tool.level)}
                     strokeLinecap="round"
                   />
@@ -135,6 +138,7 @@ const Skills = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
                 className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]"
               >
                 Frontend
@@ -158,9 +162,10 @@ const Skills = () => {
                       }
                       transition={{
                         duration: 1,
-                        delay: 0.5 + index * 0.1,
+                        // delay: 0.5 + index * 0.1,
                         ease: "easeOut",
                       }}
+                      viewport={{ once: true }}
                       className="bg-limeYellow h-1 rounded-full"
                     />
                   </div>
@@ -177,6 +182,7 @@ const Skills = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.6, duration: 0.5 }}
+                viewport={{ once: true }}
                 className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]"
               >
                 Backend
@@ -200,9 +206,10 @@ const Skills = () => {
                       }
                       transition={{
                         duration: 1,
-                        delay: 0.7 + index * 0.1,
+                        // delay: index * 0.1,
                         ease: "easeOut",
                       }}
+                      viewport={{ once: true }}
                       className="bg-limeYellow h-1 rounded-full"
                     />
                   </div>

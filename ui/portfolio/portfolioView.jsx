@@ -10,6 +10,7 @@ import { Contact } from "./contact";
 import { WhatIDo } from "./whatIDo";
 import { ArrowUp } from "lucide-react";
 import { Projects } from "./projects";
+import Stats from "./stats";
 
 const PortfolioView = () => {
   const { scrollYProgress } = useScroll();
@@ -72,13 +73,13 @@ const PortfolioView = () => {
         </button>
       </div>
 
-      <main className="relative z-10 min-h-screen flex items-center justify-center px-20 py-20">
+      <main className="relative z-10 min-h-screen flex items-center justify-center xl:px-20 py-20 backdrop-blur-xl bg-black/30">
         <div className="w-full max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="backdrop-blur-xl bg-black/30 border border-black/50 rounded-3xl shadow-2xl overflow-hidden"
+            className=" border border-black/50 rounded-3xl shadow-2xl overflow-hidden"
           >
             <Hero />
             <WhatIDo />

@@ -47,10 +47,12 @@ const Experience = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView={isInView ? "visible" : "hidden"}
+        viewport={{ once: true }}
         className="-space-y-12 max-w-5xl mx-auto"
       >
         <motion.h2
           variants={itemVariants(true)}
+          viewport={{ once: true }}
           className="text-lg text-center mb-12"
         >
           <span className="mt-5 px-6 py-3 cursor-pointer bg-white text-black rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg">
@@ -64,6 +66,7 @@ const Experience = () => {
             <motion.div
               key={idx}
               variants={itemVariants(isLeft)}
+              viewport={{ once: true }}
               className={`relative flex w-full justify-${
                 isLeft ? "start" : "end"
               }`}

@@ -4,6 +4,7 @@ import optilinko from "@/public/assets/images/optilinko.png";
 import characterAi from "@/public/assets/images/characterAi.png";
 import csnovels from "@/public/assets/images/csnovels.png";
 import marqee from "@/public/assets/images/marqee.png";
+import spicey from "@/public/assets/images/spicey.png";
 
 import {
   MonitorSmartphone,
@@ -74,7 +75,7 @@ export const projectsData = [
     title: "Spicey",
     description:
       "Developed the backend for the Spicey website using Node.js and Express, creating secure and efficient APIs. Integrated MongoDB for data storage and retrieval and also implements user authentication and authorization for secure access and collaborated with the team using Git for version control to maintain a streamlined development workflow",
-    image: img,
+    image: spicey,
     technologies: [
       "React.js",
       "Express.js",

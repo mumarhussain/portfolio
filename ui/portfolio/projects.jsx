@@ -17,7 +17,7 @@ const Projects = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -31,10 +31,10 @@ const Projects = () => {
   };
 
   const cardVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 120, opacity: 0 },
     visible: {
-      y: 0,
       opacity: 1,
+      y: 0,
     },
   };
 
@@ -71,8 +71,11 @@ const Projects = () => {
               key={project.id}
               variants={cardVariants}
               initial="hidden"
-              animate="visible"
-              transition={{ delay: index * 0.1 }}
+              whileInView="visible"
+              transition={{
+                duration: 0.5,
+                ease: "backOut",
+              }}
               whileHover={{ y: -5 }}
               className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden group relative "
             >

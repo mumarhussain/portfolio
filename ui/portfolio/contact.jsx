@@ -74,16 +74,35 @@ const Contact = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        mass: 0.5,
+      },
+    },
+  };
+
+  const formItemVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
     },
   };
 
@@ -99,9 +118,7 @@ const Contact = () => {
           variants={itemVariants}
           className="text-3xl md:text-4xl font-bold text-start mb-14"
         >
-          <span className="text-limeYellow">
-            Get In Touch
-          </span>
+          <span className="text-limeYellow">Get In Touch</span>
           <motion.div
             variants={itemVariants}
             className="w-60 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
@@ -112,16 +129,21 @@ const Contact = () => {
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">
+              <motion.h3
+                variants={itemVariants}
+                className="text-2xl font-semibold text-white mb-6"
+              >
                 Contact Information
-              </h3>
+              </motion.h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.a
                     key={index}
+                    variants={itemVariants}
+                    custom={index}
                     href={info.href}
                     whileHover={{ scale: 1.02, x: 5 }}
-                    className="flex items-center p-4  border-b border-white/10 hover:bg-white/10 hover:rounded-t-2xl transition-colors duration-200"
+                    className="flex items-center p-4 border-b border-white/10 hover:bg-white/10 hover:rounded-t-2xl transition-colors duration-200"
                   >
                     <info.icon className="w-6 h-6 text-[#D1ED5D] mr-4" />
                     <div>
@@ -133,13 +155,18 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-white mb-4">
+              <motion.h3
+                variants={itemVariants}
+                className="text-xl font-semibold text-white mb-4"
+              >
                 Connect with me:
-              </h3>
-              <div className="flex space-x-4">
+              </motion.h3>
+              <motion.div variants={itemVariants} className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
+                    variants={itemVariants}
+                    custom={index}
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -148,17 +175,23 @@ const Contact = () => {
                     <social.icon className="w-6 h-6 text-limeYellow" />
                   </motion.a>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Contact Form */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-semibold text-white mb-6">
+            <motion.h3
+              variants={itemVariants}
+              className="text-2xl font-semibold text-white mb-6"
+            >
               Send Message
-            </h3>
+            </motion.h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-1 gap-4">
+              <motion.div
+                variants={formItemVariants}
+                className="grid md:grid-cols-1 gap-4"
+              >
                 <input
                   type="text"
                   id="name"
@@ -166,7 +199,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
+                  className="w-full py-3 border-b border-white/20 text-white placeholder-white/50 focus:outline-none"
                   placeholder="Enter name here"
                 />
                 <input
@@ -176,12 +209,12 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
+                  className="w-full py-3 border-b border-white/20 text-white placeholder-white/50 focus:outline-none"
                   placeholder="Enter email here"
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={formItemVariants}>
                 <input
                   type="text"
                   id="subject"
@@ -189,12 +222,12 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full py-3 border-b border-white/20  text-white placeholder-white/50 focus:outline-none"
+                  className="w-full py-3 border-b border-white/20 text-white placeholder-white/50 focus:outline-none"
                   placeholder="What's this about?"
                 />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={formItemVariants}>
                 <label
                   htmlFor="message"
                   className="block text-white/70 text-sm font-medium mb-2"
@@ -211,13 +244,14 @@ const Contact = () => {
                   className="w-full px-4 py-3 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-limeYellow focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell me about your project or just say hello!"
                 />
-              </div>
+              </motion.div>
 
               <motion.button
+                variants={formItemVariants}
                 type="submit"
-                whileHover={{ scale: 1.01 }}
+                whileHover={{ scale: 1.01, backgroundColor: "#d4e600" }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full cursor-pointer flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold hover:bg-[#d4e600] transition-colors duration-500"
+                className="w-full cursor-pointer flex items-center justify-center space-x-2 px-6 py-3 bg-limeYellow rounded-xl text-black font-semibold transition-colors duration-500"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
