@@ -28,6 +28,17 @@ const Skills = () => {
     },
   };
 
+  const circleVariants = (level) => ({
+    hidden: { strokeDashoffset: 440 },
+    visible: {
+      strokeDashoffset: 440 - (440 * level) / 100,
+      transition: {
+        duration: 1.5,
+        ease: "easeOut",
+      },
+    },
+  });
+
   return (
     <section
       id="skills"
@@ -37,18 +48,21 @@ const Skills = () => {
         ref={ref}
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        whileInView={isInView ? "visible" : "hidden"}
       >
         <motion.h2
           variants={itemVariants}
           className="text-3xl md:text-4xl text-start mb-12"
         >
           <span className="text-white">Skills & Technologies</span>
-
           <motion.div
-            variants={itemVariants}
-            className="w-96 mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+            initial={{ width: 0 }}
+            whileInView={{ width: "384px" }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
           />
+          ;
         </motion.h2>
 
         <div className="flex items-center justify-center">
@@ -56,8 +70,8 @@ const Skills = () => {
             Tools and other
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-6 mb-16 border-b-4 pb-10 border-limeYellow/10 ">
-          {toolSkills.map((tool, index) => {
+        <div className="grid grid-cols-4 gap-6 mb-16 border-b-4 pb-10 border-limeYellow/10">
+          {toolSkills.map((tool) => {
             const radius = 70;
             const circumference = 2 * Math.PI * radius;
             const progress = circumference - (tool.level / 100) * circumference;
@@ -86,8 +100,10 @@ const Skills = () => {
                     strokeWidth="6"
                     fill="none"
                     strokeDasharray={circumference}
-                    strokeDashoffset={progress}
-                    strokeLinecap="square"
+                    initial="hidden"
+                    whileInView={isInView ? "visible" : "hidden"}
+                    variants={circleVariants(tool.level)}
+                    strokeLinecap="round"
                   />
                   <text
                     x="50%"
@@ -110,17 +126,21 @@ const Skills = () => {
           })}
         </div>
       </motion.div>
+
       <div className="grid md:grid-cols-2 gap-12">
-        {/* Frontend Skills */}
         <motion.div variants={itemVariants}>
           <div className="flex gap-5">
             <div className="flex flex-col justify-center items-center w-[10%]">
-              <p className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]">
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]"
+              >
                 Frontend
-              </p>
+              </motion.p>
             </div>
 
-            {/* Skill Bars */}
             <div className="space-y-4 w-[90%]">
               {frontendSkills.map((skill, index) => (
                 <div key={skill.name}>
@@ -133,12 +153,12 @@ const Skills = () => {
                   <div className="w-full bg-white/10 rounded-full h-1">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={
+                      whileInView={
                         isInView ? { width: `${skill.level}%` } : { width: 0 }
                       }
                       transition={{
                         duration: 1,
-                        delay: index * 0.1,
+                        delay: 0.5 + index * 0.1,
                         ease: "easeOut",
                       }}
                       className="bg-limeYellow h-1 rounded-full"
@@ -150,16 +170,19 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Backend Skills */}
         <motion.div variants={itemVariants}>
           <div className="flex gap-5">
             <div className="flex flex-col justify-center items-center w-[10%]">
-              <p className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]">
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="uppercase text-white/20 font-bold text-4xl rotate-90 tracking-[12px]"
+              >
                 Backend
-              </p>
+              </motion.p>
             </div>
 
-            {/* Skill Bars */}
             <div className="space-y-4 w-[90%]">
               {backendSkills.map((skill, index) => (
                 <div key={skill.name}>
@@ -169,15 +192,15 @@ const Skills = () => {
                     </span>
                     <span className="text-white text-sm">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-white rounded-full h-1">
+                  <div className="w-full bg-white/10 rounded-full h-1">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={
+                      whileInView={
                         isInView ? { width: `${skill.level}%` } : { width: 0 }
                       }
                       transition={{
                         duration: 1,
-                        delay: index * 0.1,
+                        delay: 0.7 + index * 0.1,
                         ease: "easeOut",
                       }}
                       className="bg-limeYellow h-1 rounded-full"

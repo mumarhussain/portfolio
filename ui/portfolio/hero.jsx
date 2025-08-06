@@ -83,7 +83,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-60 h-96 rounded-tr-[170px]  rounded-bl-[170px] rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 ">
                   <Image
-                    src="/assets/images/a0275355-b108-4c7d-9927-5d6be17dd95d.jpg"
+                    src="/assets/images/umar.jpg"
                     alt="Profile"
                     height={400}
                     width={350}

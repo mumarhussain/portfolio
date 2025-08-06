@@ -16,10 +16,23 @@ const Experience = () => {
       transition: { staggerChildren: 0.2, delayChildren: 0.3 },
     },
   };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+
+  const itemVariants = (isLeft) => ({
+    hidden: {
+      opacity: 0,
+      x: isLeft ? -50 : 50,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        mass: 0.5,
+      },
+    },
+  });
 
   return (
     <section
@@ -33,14 +46,14 @@ const Experience = () => {
         ref={ref}
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        whileInView={isInView ? "visible" : "hidden"}
         className="-space-y-12 max-w-5xl mx-auto"
       >
         <motion.h2
-          variants={itemVariants}
+          variants={itemVariants(true)}
           className="text-lg text-center mb-12"
         >
-          <span className="mt-5 px-6 py-3 cursor-pointer bg-white text-black  rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg">
+          <span className="mt-5 px-6 py-3 cursor-pointer bg-white text-black rounded-full hover:bg-[#d4e600] transition-colors duration-200 shadow-lg">
             👨‍💻 Works Experience
           </span>
         </motion.h2>
@@ -50,7 +63,7 @@ const Experience = () => {
           return (
             <motion.div
               key={idx}
-              variants={itemVariants}
+              variants={itemVariants(isLeft)}
               className={`relative flex w-full justify-${
                 isLeft ? "start" : "end"
               }`}
@@ -63,7 +76,7 @@ const Experience = () => {
                 className={`
                   relative bg-white/5 border border-white/10 rounded-2xl p-6
                   w-full md:w-[47%] 
-                  ${isLeft ? "pr-8 md:mr-5" : "pl-8 md: ml-5"}
+                  ${isLeft ? "pr-8 md:mr-5" : "pl-8 md:ml-5"}
                 `}
               >
                 {/* Pointer triangle */}
