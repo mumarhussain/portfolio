@@ -1,4 +1,5 @@
 "use client";
+import RoleRotator from "@/components/typeWriter";
 import { motion } from "framer-motion";
 import { Calendar, Phone, Mail, MapPin, Menu } from "lucide-react";
 import Image from "next/image";
@@ -56,32 +57,22 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative px-8 md:px-16 py-20 border-b border-white/10"
+      className="relative px-6  lg:px-16 py-10 md:pb-20 border-b border-white/10"
     >
-      {/* Menu Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, ease: "easeOut" }}
-        className="absolute top-8 right-8 w-12 h-12 bg-limeYellow rounded-full flex items-center justify-center hover:bg-[#d4e600] transition-colors duration-200"
-      >
-        <Menu className="w-6 h-6 text-black" />
-      </motion.button>
-
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Left Side - Profile Image */}
             <motion.div
               variants={leftVariants}
-              className="flex justify-center lg:justify-start md:w-1/4"
+              className="flex justify-center lg:justify-start w-full md:w-1/3 lg:w-1/4"
             >
               <div className="relative">
-                <div className="w-60 h-96 rounded-tr-[170px]  rounded-bl-[170px] rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 ">
+                <div className="w-auto max-w-60 md:w-60 h-[400px] md:h-96 rounded-full md:rounded-tr-[170px] md:rounded-bl-[170px] md:rounded-xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 ">
                   <Image
                     src="/assets/images/umar.jpg"
                     alt="Profile"
@@ -125,20 +116,23 @@ const Hero = () => {
               variants={rightContainerVariants}
               initial="hidden"
               animate="visible"
-              className="space-y-8 md:w-3/4"
+              className="space-y-8 mt-10 md:mt-0 w-full md:pl-5 lg:pl-10 xl:pl-0  md:w-2/3 lg:w-3/4"
             >
               {/* Greeting */}
-              <motion.div variants={itemVariants} className="space-y-4">
+              <motion.div
+                variants={itemVariants}
+                className="space-y-2 lg:space-y-4"
+              >
                 <p className="text-white/80 text-lg flex items-center">
                   Hello Everyone <span className="ml-2 text-2xl">👋</span>
                 </p>
-                <h1 className="lg:text-4xl font-medium text-white leading-tight">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white leading-tight md:tracking-tight lg:tracking-normal">
                   I'm Muhammad Umar Hussain
                 </h1>
-                <h2 className="text-4xl font-medium">
+
+                <h2 className="text-lg sm:text-3xl lg:text-4xl font-medium sm:inline-flex sm:items-baseline gap-2 sm:whitespace-nowrap">
                   <span className="text-white">I am a </span>
-                  <span className="text-limeYellow">MERN Stack Developer</span>
-                  <span className="text-white">.</span>
+                  <RoleRotator className="text-limeYellow" />
                 </h2>
               </motion.div>
 
@@ -151,7 +145,7 @@ const Hero = () => {
               {/* Contact Info Grid */}
               <motion.div
                 variants={itemVariants}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-5"
               >
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-5 h-5 text-limeYellow" />
@@ -163,7 +157,7 @@ const Hero = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-limeYellow" />
-                  <span className="text-white/80">
+                  <span className="text-white/80 text-[15px] sm:text-base">
                     mumarhussain126@gmail.com
                   </span>
                 </div>
@@ -181,7 +175,7 @@ const Hero = () => {
           <div className="">
             <motion.p
               variants={itemVariants}
-              className="text-white/70 text-lg leading-relaxed my-10"
+              className="text-white/70 text-flui leading-relaxed my-10"
             >
               With over 2 years of experience, I am a skilled MERN Stack
               Developer proficient in developing and deploying full-stack
