@@ -66,7 +66,7 @@ const Projects = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-8 cursor-pointer"
           layout
         >
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
@@ -77,7 +77,7 @@ const Projects = () => {
                 ease: "backOut",
               }}
               whileHover={{ y: -5 }}
-              className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden group relative "
+              className="bg-white/5 rounded-xl lg:rounded-2xl border border-white/10 overflow-hidden group relative "
             >
               <div className="relative overflow-hidden">
                 <Image
@@ -100,7 +100,7 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="px-3 py-4  lg:p-6">
                 {/* Project Header */}
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-semibold text-white group-hover:text-[#e6ff00] transition-colors duration-200">
