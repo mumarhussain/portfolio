@@ -53,17 +53,16 @@ const Skills = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl md:text-4xl text-start mb-12"
+          className="text-white text-2xl sm:text-3xl md:text-4xl text-start mb-12"
         >
-          <span className="text-white">Skills & Technologies</span>
+          Skills & Technologies
           <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "384px" }}
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+            className="mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent origin-left w-[254px] sm:w-[310px] md:w-[384px] transform"
           />
-          ;
         </motion.h2>
 
         <div className="flex items-center justify-center">
