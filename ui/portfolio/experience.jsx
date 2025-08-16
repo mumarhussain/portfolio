@@ -37,10 +37,9 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative px-8 md:px-16 py-16 border-b border-white/10"
+      className="relative px-6 sm:px-8 md:px-16 py-16 border-b border-white/10"
     >
-      {/* Center vertical line */}
-      <div className="absolute left-1/2 top-25 h-[62%] w-px bg-limeYellow -translate-x-1/2" />
+      <div className="hidden md:block absolute left-1/2 top-25 h-[62%] w-px bg-limeYellow -translate-x-1/2" />
 
       <motion.div
         ref={ref}
@@ -48,7 +47,7 @@ const Experience = () => {
         initial="hidden"
         whileInView={isInView ? "visible" : "hidden"}
         viewport={{ once: true }}
-        className="-space-y-12 max-w-5xl mx-auto"
+        className="space-y-8 md:-space-y-12 max-w-5xl mx-auto"
       >
         <motion.h2
           variants={itemVariants(true)}
@@ -62,29 +61,30 @@ const Experience = () => {
 
         {experiencesData.map((exp, idx) => {
           const isLeft = idx % 2 === 0;
+
           return (
             <motion.div
               key={idx}
               variants={itemVariants(isLeft)}
               viewport={{ once: true }}
-              className={`relative flex w-full justify-${
-                isLeft ? "start" : "end"
-              }`}
+              className={`relative flex w-full ${
+                isLeft ? "md:justify-start" : "md:justify-end"
+              } justify-center`}
             >
-              {/* Timeline dot */}
-              <div className="absolute left-1/2 top-17 w-4 h-4 bg-limeYellow rounded-full border-4 border-black -translate-x-1/2" />
+              {/* Timeline dot (hidden on mobile, visible from md) */}
+              <div className="hidden md:block absolute left-1/2 top-17 w-4 h-4 bg-limeYellow rounded-full border-4 border-black -translate-x-1/2" />
 
               {/* Card */}
               <div
                 className={`
                   relative bg-white/5 border border-white/10 rounded-2xl p-6
-                  w-full md:w-[47%] 
-                  ${isLeft ? "pr-8 md:mr-5" : "pl-8 md:ml-5"}
+                  w-full sm:w-[90%] md:w-[47%]
+                  ${isLeft ? "md:pr-8 md:mr-5" : "md:pl-8 md:ml-5"}
                 `}
               >
-                {/* Pointer triangle */}
+                {/* Pointer triangle (hidden on mobile, visible from md) */}
                 <div
-                  className={`absolute top-15 z-20 ${
+                  className={`hidden md:block absolute top-15 z-20 ${
                     isLeft
                       ? "right-0 -mr-3.5 border-l-[14px]"
                       : "left-0 -ml-3.5 border-r-[14px]"
