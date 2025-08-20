@@ -1,4 +1,3 @@
-import img from "@/public/assets/images/darkGreenlead.avif";
 import bexit from "@/public/assets/images/Dashboard1.png";
 import optilinko from "@/public/assets/images/optilinko.png";
 import characterAi from "@/public/assets/images/characterAi.png";
