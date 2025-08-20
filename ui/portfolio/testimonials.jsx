@@ -67,12 +67,12 @@ const Testimonials = () => {
           className="mb-6"
         >
           {/* <p className="text-limeYellow italic">- Testimonials</p> */}
-          <h2 className="text-2xl md:text-4xl font-semibold  text-limeYellow">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold  text-limeYellow">
             Real people, real results.
           </h2>
           <motion.div
             variants={itemVariants}
-            className="w-[470px] mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
+            className="w-[260px] sm:w-[300px] md:w-[470px] mt-1 h-0.5 rounded-r-full bg-gradient-to-r from-limeYellow via-white/60 to-transparent"
           />
         </motion.div>
 
