@@ -82,8 +82,8 @@ const PortfolioView = () => {
             className="border border-black/50 rounded-3xl shadow-2xl overflow-hidden"
           >
             <Hero />
-            <WhatIDo />
             <Skills />
+            <WhatIDo /> 
             <Experience />
             <Education />
             <Projects />

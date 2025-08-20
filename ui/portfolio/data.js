@@ -154,10 +154,10 @@ export const frontendSkills = [
 
 export const backendSkills = [
   { name: "Node.js", level: 90 },
-  { name: "MySql", level: 85 },
+  { name: "MySql", level: 91 },
   { name: "PostgreSQL", level: 88 },
   { name: "MongoDB", level: 82 },
-  { name: "GraphQL", level: 80 },
+  { name: "GraphQL", level: 85 },
 ];
 
 export const toolSkills = [
