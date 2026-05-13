@@ -4,46 +4,49 @@ import characterAi from "@/public/assets/images/characterAi.png";
 import csnovels from "@/public/assets/images/csnovels.png";
 import marqee from "@/public/assets/images/marqee.png";
 import spicey from "@/public/assets/images/spicey.png";
+import plagiarismGuard from "@/public/assets/images/plagarismGuard.png";
 
 import {
   MonitorSmartphone,
-  Smartphone,
+  ServerCog,
   LayoutDashboard,
   ShieldCheck,
   GaugeCircle,
-  RefreshCw,
+  Sparkles,
 } from "lucide-react";
 
 export const projectsData = [
   {
     id: 1,
-    title: "Optilinko Website",
+    title: "Optilinko",
     description:
-      "Developed Bexit – Business Management Admin Panel using Node.js, Express and JWT authentication. Built a centralized dashboard with user/business approvals, role‑based access control for admins and owners, real‑time revenue and user analytics, automated CSV/PDF reporting, and a responsive Tailwind CSS UI.",
+      "Architected a full-stack application using MERN stack and MySQL, featuring scalable REST APIs and a responsive React UI with reusable components. Delivered ~30% performance improvement via frontend and backend optimizations and database query tuning. Built an Admin Dashboard for blog management, increasing content handling efficiency.",
     image: optilinko,
     technologies: [
       "Next.js",
       "Express.js",
       "Node.js",
-      "Mongo DB",
+      "MongoDB",
+      "MySQL",
       "Tailwind CSS",
     ],
     liveUrl: "https://optilinko-website.vercel.app/",
     date: "2024",
-    featured: false,
+    featured: true,
     status: "Complete",
   },
   {
     id: 2,
     title: "Bexit Admin Panel",
     description:
-      "Developed Bexit – Business Management Admin Panel using Node.js, Express and JWT authentication. Built a centralized dashboard with user/business approvals, role‑based access control for admins and owners, real‑time revenue and user analytics, automated CSV/PDF reporting, and a responsive Tailwind CSS UI.",
+      "Architected a centralized business management dashboard using Node.js, Express, and JWT authentication. Features user and business approval flows, role-based access control for admins and owners, real-time revenue and user analytics, and automated CSV/PDF reporting with a responsive Tailwind CSS interface.",
     image: bexit,
     technologies: [
       "Next.js",
       "Express.js",
       "Node.js",
-      "Mongo DB",
+      "MongoDB",
+      "JWT",
       "Tailwind CSS",
     ],
     liveUrl: "#",
@@ -53,15 +56,34 @@ export const projectsData = [
   },
   {
     id: 3,
+    title: "PlagiarismGuard",
+    description:
+      "Implemented core detection services for duplicate and AI-generated text analysis, including real-time content similarity scoring via RESTful APIs. Created responsive React interfaces for document scanning, reporting, and review workflows with third-party detection tool integrations.",
+    image: plagiarismGuard, // add your import at the top
+    technologies: [
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "REST API",
+      "Tailwind CSS",
+    ],
+    liveUrl: "#",
+    date: "2024",
+    featured: true,
+    status: "Complete",
+  },
+  {
+    id: 4,
     title: "Character AI",
     description:
-      "Developed a full-stack AI chatbot platform using Next.js , Node.js , Express , Mongo DB , and Tailwind CSS. Features include JWT authentication , real-time chat , AI character customization , and an admin dashboard for user and content management. Built a scalable REST API with optimized database queries for performance.",
+      "Developed a full-stack AI chatbot platform with JWT authentication, real-time chat, AI character customization, and an admin dashboard for user and content management. Built a scalable REST API layer with optimized MongoDB queries for high-concurrency performance.",
     image: characterAi,
     technologies: [
       "Next.js",
       "Express.js",
       "Node.js",
-      "Mongo DB",
+      "MongoDB",
       "Tailwind CSS",
     ],
     liveUrl: "https://character-ai-project.vercel.app/",
@@ -70,16 +92,16 @@ export const projectsData = [
     status: "Complete",
   },
   {
-    id: 4,
+    id: 5,
     title: "Spicey",
     description:
-      "Developed the backend for the Spicey website using Node.js and Express, creating secure and efficient APIs. Integrated MongoDB for data storage and retrieval and also implements user authentication and authorization for secure access and collaborated with the team using Git for version control to maintain a streamlined development workflow",
+      "Engineered a secure RESTful backend using Node.js and Express with enhanced MongoDB integration for efficient data storage and retrieval. Implemented user authentication and authorization with role-based access control and protected API endpoints across the platform.",
     image: spicey,
     technologies: [
       "React.js",
       "Express.js",
       "Node.js",
-      "Mongo DB",
+      "MongoDB",
       "Tailwind CSS",
     ],
     liveUrl: "#",
@@ -88,16 +110,16 @@ export const projectsData = [
     status: "In Process",
   },
   {
-    id: 5,
-    title: "CS Novel",
+    id: 6,
+    title: "CS Novels",
     description:
-      "Contributed as a MERN Stack Developer in CS Novels, developed the backend using Node.js and Express to deliver efficient APIs. Designed MongoDB databases and ensured secure data management for efficient handling of dynamic content and for frontend use Tailwind CSS with React.js to build responsive and visually appealing user interfaces.",
+      "Contributed as a MERN Stack Developer building efficient REST APIs with Node.js and Express. Designed MongoDB schemas for secure and dynamic content management. Built responsive and visually appealing user interfaces using React.js and Tailwind CSS.",
     image: csnovels,
     technologies: [
-      "React",
+      "React.js",
       "Express.js",
       "Node.js",
-      "Mongo DB",
+      "MongoDB",
       "Tailwind CSS",
     ],
     liveUrl: "https://csnovels.com",
@@ -106,41 +128,56 @@ export const projectsData = [
     status: "Complete",
   },
   {
-    id: 6,
-    title: "Marquee booking system",
+    id: 7,
+    title: "Marquee Booking System",
     description:
-      "Designed the Frontend building interactive and user-friendly interfaces using Next.js and TypeScript. Utilized Tailwind CSS to create responsive and visually appealing designs. Managed state effectively with Zustand for a smooth user experience. Integrated Firebase for real-time data handling and seamless backend connectivity.",
+      "Designed and built interactive, user-friendly booking interfaces using Next.js and TypeScript. Utilized Tailwind CSS for responsive design, Zustand for smooth state management, and Firebase for real-time data handling and seamless backend connectivity.",
     image: marqee,
-    technologies: ["Next.js", "Typescrit", "Tailwind", "Firebase", "Zustand"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Zustand",
+    ],
     liveUrl: "#",
     date: "2022",
-    featured: true,
+    featured: false,
     status: "In Process",
   },
 ];
 
 export const services = [
-  { icon: MonitorSmartphone, title: "Web Sites", subtitle: "and Platforms" },
-  { icon: Smartphone, title: "Mobile", subtitle: "Applications" },
   {
-    icon: LayoutDashboard,
-    title: "Admin ",
-    subtitle: "Panel and CMS",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Authentication ",
-    subtitle: "and Authorization",
+    icon: MonitorSmartphone,
+    title: "Full-Stack Web",
+    subtitle: "Applications & Platforms",
   },
   {
     icon: GaugeCircle,
     title: "Performance",
-    subtitle: "Optimization",
+    subtitle: "Optimization & Tuning",
+  },
+  
+  {
+    icon: ServerCog,        // or: Database
+    title: "REST API",
+    subtitle: "Design & Architecture",
   },
   {
-    icon: RefreshCw,
-    title: "Website ",
-    subtitle: "Maintenance & Support",
+    icon: ShieldCheck,
+    title: "Authentication",
+    subtitle: "JWT & Role-Based Access",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Admin Dashboards",
+    subtitle: "& CMS Development",
+  },
+  {
+    icon: Sparkles,     // or: Sparkles / Bot
+    title: "AI-Powered",
+    subtitle: "Platform Development",
   },
 ];
 
@@ -148,23 +185,23 @@ export const frontendSkills = [
   { name: "React", level: 92 },
   { name: "Next.js", level: 94 },
   { name: "TypeScript", level: 88 },
-  { name: "Tailwind CSS", level: 95 },
-  { name: "State Management", level: 90 },
+  { name: "JavaScript (ES6+)", level: 89 },
+  { name: "Tailwind CSS", level: 95 }, 
 ];
 
 export const backendSkills = [
   { name: "Node.js", level: 90 },
-  { name: "MySql", level: 91 },
-  { name: "PostgreSQL", level: 88 },
-  { name: "MongoDB", level: 82 },
-  { name: "GraphQL", level: 85 },
+  { name: "Express.js,", level: 91 },
+  { name: "REST API Design", level: 88 },
+  { name: "JWT Authentication", level: 82 },
+  { name: "Session Management", level: 85 },
 ];
 
 export const toolSkills = [
-  { name: "Git", level: 95 },
+  { name: "Git & GitHub", level: 95 },
   { name: "AWS", level: 80 },
-  { name: "Figma", level: 88 },
-  { name: "Jest", level: 85 },
+  { name: "API Integration", level: 88 },
+  { name: "DB Management", level: 85 },
 ];
 
 export const experiencesData = [

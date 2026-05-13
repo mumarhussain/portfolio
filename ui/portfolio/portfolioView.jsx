@@ -79,7 +79,7 @@ const PortfolioView = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="border border-black/50 rounded-3xl shadow-2xl overflow-hidden"
+            className=" rounded-xl overflow-hidden"
           >
             <Hero />
             <Skills />

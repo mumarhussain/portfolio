@@ -96,7 +96,7 @@ const Hero = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-[18%] -translate-x-1/2 -translate-y-1/2 w-[min(520px,80vw)] h-[min(520px,80vw)] rounded-full bg-limeYellow/[0.05] blur-[120px]"
+        className="pointer-events-none absolute top-1/2 left-[18%] -translate-x-1/2 -translate-y-1/2 w-[min(520px,80vw)] h-[min(520px,80vw)] rounded-full blur-[120px]"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -262,7 +262,7 @@ const Hero = () => {
           >
             <motion.p
               variants={itemVariants}
-              className="w-full text-white/80 leading-relaxed"
+              className="w-full text-white/80 text-lg leading-relaxed"
             >
               MERN Stack Developer with 3+ years of experience building
               production-grade full-stack web applications. Specializes in
@@ -281,7 +281,7 @@ const Hero = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center gap-3 px-8 py-3 bg-limeYellow text-black font-bold text-sm tracking-widest uppercase overflow-hidden rounded-sm cursor-pointer"
+              className="group relative inline-flex items-center gap-3 px-8 py-3 bg-limeYellow text-black font-bold text-sm tracking-widest uppercase overflow-hidden rounded-full cursor-pointer"
             >
               <span
                 aria-hidden="true"
