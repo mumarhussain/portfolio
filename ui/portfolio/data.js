@@ -209,23 +209,16 @@ export const experiencesData = [
     title: "MERN Stack Developer",
     company: "DGSol Marketing Agency",
     location: "Faisalabad, Pakistan",
-    period: "Feb 2025 - Present",
+    period: "February 2024 - Present",
     description:
       "Designing and maintaining dynamic web applications using the MERN stack, focusing on seamless user experiences and optimized backend functionality. Integrating secure authentication systems and scalable architecture.",
   },
-  {
-    title: "MERN Stack Developer",
-    company: "Three Arrow Tech",
-    location: "Faisalabad, Pakistan",
-    period: "June 2024 - Dec 2024",
-    description:
-      "Built and deployed full-stack applications using MongoDB, Express.js, Next.js, and Node.js. Implemented user authentication and role-based access control with JWT. Optimized database schemas and queries to reduce response time.",
-  },
+  
   {
     title: "Frontend Developer",
     company: "TOPSOL Faisalabad",
     location: "Faisalabad, Pakistan",
-    period: "Feb 2023 - Apr 2024",
+    period: "April 2023 - January 2024",
     description:
       "Developed responsive, high-performance web interfaces. Collaborated with UI/UX designers to implement pixel-perfect layouts with Tailwind CSS. Integrated RESTful APIs and real-time data feeds, optimizing requests to reduce page load time.",
   },
