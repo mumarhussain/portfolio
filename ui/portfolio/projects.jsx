@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Eye, Calendar, Tag } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 import { projectsData } from "./data";
 import Image from "next/image";
 import Link from "next/link";
