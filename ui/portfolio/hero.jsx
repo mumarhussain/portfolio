@@ -112,49 +112,68 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="flex justify-center md:justify-start w-full md:w-[40%] shrink-0"
+              className="flex w-full shrink-0 justify-center md:w-[40%] md:justify-start"
             >
-              <div className="relative">
+              <motion.div
+                className="group/image relative"
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.4, ease: premiumEase }}
+              >
                 <motion.div
                   aria-hidden="true"
-                  className="absolute -top-8 -right-10 w-28 h-28 rounded-full border border-limeYellow/20 pointer-events-none"
+                  className="pointer-events-none absolute -right-10 -top-8 h-28 w-28 rounded-full border border-dashed border-limeYellow/25"
                   animate={{ rotate: 360 }}
                   transition={{
-                    duration: 30,
+                    duration: 40,
                     repeat: Infinity,
                     ease: "linear",
                   }}
                 />
                 <motion.div
                   aria-hidden="true"
-                  className="absolute -bottom-12 -left-8 w-10 h-10 border border-limeYellow/30 rotate-45 pointer-events-none"
-                  animate={{ y: [0, -10, 0], rotate: [45, 50, 45] }}
+                  className="pointer-events-none absolute -bottom-12 -left-8 h-10 w-10 rotate-45 border border-limeYellow/30"
+                  animate={{ y: [0, -10, 0], rotate: [45, 52, 45] }}
                   transition={{
                     duration: 8,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
                 />
+                <motion.div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-4 top-1/2 h-16 w-16 -translate-y-1/2 rounded-full border border-limeYellow/10"
+                  animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0.7, 0.4] }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
 
-                <div className="absolute left-0 top-[20%] z-20 w-1 h-[60%] bg-limeYellow" />
+                <div className="absolute left-0 top-[20%] z-20 h-[60%] w-1 bg-gradient-to-b from-limeYellow via-limeYellow/80 to-transparent shadow-[0_0_12px_rgba(230,255,0,0.5)]" />
 
-                <div className="relative ring-2 ring-limeYellow/40 ring-offset-4 ring-offset-black rounded-tl-[100px] rounded-br-[100px] overflow-hidden w-full max-w-[280px] md:w-[280px] h-[400px] md:h-[420px] bg-gradient-to-b from-gray-800 to-gray-900">
-                  <Image
-                    src="/assets/images/profile1.png"
-                    alt="Profile"
-                    height={400}
-                    width={350}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative rounded-tl-[100px] rounded-br-[100px] bg-gradient-to-br from-limeYellow/20 via-white/[0.04] to-limeYellow/10 p-[1px] shadow-[0_24px_60px_rgba(0,0,0,0.45)]">
+                  <div className="relative h-[400px] w-full max-w-[280px] overflow-hidden rounded-tl-[100px] rounded-br-[100px] bg-gradient-to-b from-gray-800 to-gray-900 ring-1 ring-white/10 ring-offset-2 ring-offset-black md:h-[420px] md:w-[280px]">
+                    <Image
+                      src="/assets/images/profile1.png"
+                      alt="Profile"
+                      height={400}
+                      width={350}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover/image:scale-[1.03]"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-limeYellow/[0.06]" />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-limeYellow/[0.08] opacity-60" />
+                  </div>
                 </div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, ease: premiumEase, duration: 0.6 }}
-                  className="absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-full px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+                  whileHover={{ y: -2 }}
+                  className="absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-full border border-white/15 bg-white/[0.08] px-5 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.35),0_0_20px_rgba(230,255,0,0.08)] backdrop-blur-xl"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3.5 sm:gap-4">
                     {socialLinks.map(({ href, icon: Icon, label }) => (
                       <motion.a
                         key={label}
@@ -166,15 +185,16 @@ const Hero = () => {
                             : undefined
                         }
                         aria-label={label}
-                        whileHover={{ y: -2, scale: 1.1 }}
-                        className="text-white hover:text-limeYellow transition-colors duration-300"
+                        whileHover={{ y: -3, scale: 1.12 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="rounded-full p-1 text-white/80 transition-colors duration-300 hover:text-limeYellow"
                       >
-                        <Icon className="w-4 h-4" />
+                        <Icon className="h-4 w-4" />
                       </motion.a>
                     ))}
                   </div>
                 </motion.div>
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* Right — Content (~60%) */}
@@ -229,43 +249,48 @@ const Hero = () => {
                     <div className="p-2 border border-limeYellow/30 rounded-md bg-limeYellow/5 hover:bg-limeYellow/10 transition-colors duration-300 shrink-0">
                       <Icon className="w-4 h-4 text-limeYellow" />
                     </div>
-                    <span className="text-white/70 text-sm">{value}</span>
+                    <span className="text-white/70">{value}</span>
                   </div>
                 ))}
               </motion.div>
-
-              <motion.p
-                variants={itemVariants}
-                className="max-w-xl text-white/60 text-sm leading-relaxed"
-              >
-                MERN Stack Developer with 3+ years of experience building
-                production-grade full-stack web applications. Specializes in
-                scalable REST API architecture, reusable React component systems,
-                and database design across MongoDB, MySQL, and PostgreSQL. Proven
-                track record of delivering measurable performance improvements —
-                including 30% system performance gains and reductions in UI
-                development time. Hands-on experience with AIpowered platforms,
-                real-time applications, and CI/CD pipelines. Currently pursuing a
-                BSCS in Computer Science while working full-time in the industry
-              </motion.p>
-
-              <motion.a
-                href="/Muhammad Umar Hussain Resume.pdf"
-                download="Muhammad_Umar_Hussain_Resume.pdf"
-                variants={itemVariants}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-3 px-8 py-3 bg-limeYellow text-black font-bold text-sm tracking-widest uppercase overflow-hidden rounded-sm cursor-pointer"
-              >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-black/15 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
-                />
-                <span className="relative z-10">Download Resume</span>
-                <Download className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.a>
             </motion.div>
           </div>
+
+          <motion.div
+            variants={itemVariants}
+            className="mt-10 w-full space-y-6 border-t border-white/10 pt-10 lg:mt-12 lg:pt-12"
+          >
+            <motion.p
+              variants={itemVariants}
+              className="w-full text-white/80 leading-relaxed"
+            >
+              MERN Stack Developer with 3+ years of experience building
+              production-grade full-stack web applications. Specializes in
+              scalable REST API architecture, reusable React component systems,
+              and database design across MongoDB, MySQL, and PostgreSQL. Proven
+              track record of delivering measurable performance improvements —
+              including 30% system performance gains and reductions in UI
+              development time. Hands-on experience with AIpowered platforms,
+              real-time applications, and CI/CD pipelines. Currently pursuing a
+              BSCS in Computer Science while working full-time in the industry
+            </motion.p>
+
+            <motion.a
+              href="/Muhammad Umar Hussain Resume.pdf"
+              download="Muhammad_Umar_Hussain_Resume.pdf"
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group relative inline-flex items-center gap-3 px-8 py-3 bg-limeYellow text-black font-bold text-sm tracking-widest uppercase overflow-hidden rounded-sm cursor-pointer"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 bg-black/15 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+              />
+              <span className="relative z-10">Download Resume</span>
+              <Download className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
