@@ -1,7 +1,17 @@
 "use client";
 import RoleRotator from "@/components/typeWriter";
 import { motion } from "framer-motion";
-import { Calendar, Phone, Mail, MapPin, Menu } from "lucide-react";
+import {
+  Calendar,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Github,
+  Linkedin,
+  Instagram,
+  Dribbble,
+} from "lucide-react";
 import Image from "next/image";
 
 const Hero = () => {
@@ -89,22 +99,50 @@ const Hero = () => {
                   transition={{ delay: 0.8, ease: "easeOut", duration: 0.6 }}
                   className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-6 py-3 shadow-lg"
                 >
-                  <div className="flex space-x-4 text-black font-medium">
-                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
-                      Fb.
-                    </span>
-                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
-                      Gh.
-                    </span>
-                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
-                      Ln.
-                    </span>
-                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
-                      Ins.
-                    </span>
-                    <span className="hover:text-gray-500 cursor-pointer transition-colors">
-                      Drb.
-                    </span>
+                  <div className="flex items-center space-x-4 text-black">
+                    <a
+                      href="https://www.facebook.com/umarhussain230"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      className="hover:text-gray-500 transition-colors"
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://github.com/mumarhussain"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="hover:text-gray-500 transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/mumarhussain"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="hover:text-gray-500 transition-colors"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/umarhussain_230/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="hover:text-gray-500 transition-colors"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="#"
+                      aria-label="Dribbble"
+                      className="hover:text-gray-500 transition-colors"
+                    >
+                      <Dribbble className="w-5 h-5" />
+                    </a>
                   </div>
                 </motion.div>
               </div>
@@ -177,22 +215,20 @@ const Hero = () => {
               variants={itemVariants}
               className="text-white/70 text-flui leading-relaxed my-10"
             >
-              With over 2 years of experience, I am a skilled MERN Stack
-              Developer proficient in developing and deploying full-stack
-              applications. I excel at building interactive front-end interfaces
-              using React.js, creating secure backends with Node.js and Express,
-              and efficiently managing databases with MongoDB. I have expertise
-              in user authentication, real-time data interaction, and responsive
-              design. I am committed to delivering high-quality, user-focused
-              solutions while effectively utilizing the MERN stack.
+              MERN Stack Developer with 3+ years of experience building production-grade full-stack web
+applications. Specializes in scalable REST API architecture, reusable React component
+systems, and database design across MongoDB, MySQL, and PostgreSQL. Proven track
+record of delivering measurable performance improvements — including 30% system
+performance gains and reductions in UI development time. Hands-on experience with AIpowered platforms, real-time applications, and CI/CD pipelines. Currently pursuing a BSCS
+in Computer Science while working full-time in the industry
             </motion.p>
             <motion.a
-              href="/Muhammad_Umar_Hussain_Resume.pdf"
+              href="/Muhammad Umar Hussain Resume.pdf"
               download="Muhammad_Umar_Hussain_Resume.pdf"
               variants={itemVariants}
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-4 cursor-pointer bg-limeYellow text-black font-semibold rounded-full hover:bg-[#d4e600] transition-colors duration-500 shadow-lg"
+              className="inline-block px-8 py-2 cursor-pointer bg-limeYellow text-black font-semibold rounded-full hover:bg-[#d4e600] transition-colors duration-500 shadow-lg"
             >
               Download Resume
             </motion.a>
